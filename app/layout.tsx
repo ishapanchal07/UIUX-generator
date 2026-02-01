@@ -3,7 +3,9 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 
 
-const appF
+const appFont = DM_Sans({
+  subsets: ['latin']
+})
 
 export const metadata: Metadata = {
   title: "UIUX Mockup generator App",
@@ -17,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={appFont.className}>
         {children}
       </body>
     </html>
